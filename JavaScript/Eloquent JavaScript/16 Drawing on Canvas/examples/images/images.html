@@ -1,0 +1,36 @@
+<!doctype html>
+<body>
+	<canvas id="c1" width="1000"></canvas>
+	<script>
+		var cx1 = document.querySelector('#c1').getContext('2d');
+		var img1 = document.createElement('img');
+		img1.src = 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlsqHUgfdUmtZi202XRGJ56gfXXicjAzQ07sqGMZNdjLf_1Tkm';
+		img1.addEventListener('load', function() {
+			for (var x = 10; x < 1000; x += 128) 
+				cx1.drawImage(img1, x, 10);
+		});
+	</script>
+
+	<canvas id="c2"></canvas>
+	<script>
+		var cx = document.querySelector('#c2').getContext('2d');
+		var img = document.createElement('img');
+		img.src = 'img/player.png';
+		var spriteW = 24;
+		var spriteH = 30;
+
+		img.addEventListener('load', function() {
+			var cycle = 0;
+
+			setInterval(function() {
+				cx.clearRect(0, 0, spriteW, spriteH);
+				cx.drawImage(img,
+					// source rectangle
+					cycle * spriteW, 0, spriteW, spriteH,
+					// destination rectangle
+					0, 0, spriteW, spriteH);
+				cycle = (cycle + 1) % 8;
+			}, 120);
+		});
+	</script>
+</body>

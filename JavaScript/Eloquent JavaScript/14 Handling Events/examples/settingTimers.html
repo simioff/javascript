@@ -1,0 +1,36 @@
+<!doctype html>
+<body>
+	<h1></h1>
+	<h2></h2>
+
+	<script>
+		document.body.style.background = 'blue';
+
+		setTimeout(function() {
+			document.body.style.background = 'yellow';
+		}, 2000);
+	</script>
+
+	<script>
+		var bombTimer = setTimeout(function() {
+			document.querySelector('h1').innerText = 'BOOM!';
+		}, 500);
+
+		if (Math.random() < 0.5) {
+			document.querySelector('h1').innerText = 'Defused.';
+			clearTimeout(bombTimer);
+		}
+	</script>
+
+	<script>
+		var ticks = 0;
+		var clock = setInterval(function() {
+			document.querySelector('h2').innerText = 'ticks= ' + ticks++;
+
+			if (ticks == 10) {
+				clearInterval(clock);
+				console.log('stop.');
+			}
+		}, 200);
+	</script>
+</body>

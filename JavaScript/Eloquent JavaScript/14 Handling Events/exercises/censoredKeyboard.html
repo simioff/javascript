@@ -1,0 +1,26 @@
+<!doctype html>
+<body>
+	<input type="text">
+	<p></p>
+
+	<script>
+		var input = document.querySelector('input');
+
+		input.addEventListener('keydown', function(event) {
+			if (event.keyCode == 81 || 
+				event.keyCode == 87 || 
+				event.keyCode == 88) {
+				var char = String.fromCharCode(event.keyCode);
+				document.querySelector('p').innerText = char + ' is forbidden';
+			}
+		});
+
+		input.addEventListener('keyup', function(event) {
+			if (event.keyCode == 81 || 
+				event.keyCode == 87 || 
+				event.keyCode == 88) {
+				input.value = input.value.slice(0, input.value.length -1);
+			}
+		});
+	</script>
+</body>

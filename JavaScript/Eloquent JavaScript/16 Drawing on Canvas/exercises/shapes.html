@@ -1,0 +1,17 @@
+<!doctype html>
+<body>
+	<canvas id="c1"></canvas>
+	<script>
+		var cx = document.querySelector('#c1').getContext('2d');
+
+		cx.beginPath();
+		cx.moveTo(20, 20);
+		cx.lineTo(10, 50);
+		cx.lineTo(70, 50);
+		cx.lineTo(60, 20);
+		cx.closePath();
+		cx.stroke();
+	</script>
+
+	<!-- TODO -->
+</body>

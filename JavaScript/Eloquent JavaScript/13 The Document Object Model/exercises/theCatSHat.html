@@ -1,0 +1,51 @@
+<!doctype html>
+<head></head>
+<body>
+	<p stype="text-align: center">
+		<img id="cat" src="https://www.tailster.com/Content/images/cat-icon-alert.png" stpe="position: relative">
+		<img id="hat" src="https://vignette.wikia.nocookie.net/dont-starve-game/images/8/8d/Top_Hat.png/revision/latest?cb=20160809084821" stpe="position: relative">
+	</p>
+
+	<script>
+		var cat = document.querySelector('#cat');
+		cat.style.position = 'absolute';
+		var angle = 0;
+		var lastTime = null;
+
+		function animate(time) {
+			if (lastTime != null) {
+				angle += (time - lastTime) * 0.001;
+			}
+
+			lastTime = time;
+			cat.style.top = ((Math.sin(angle) * 40) + 400) + "px";
+			cat.style.left = ((Math.cos(angle) * 200) + 400) + "px";
+
+			requestAnimationFrame(animate);
+		}
+
+		requestAnimationFrame(animate);
+
+		var hat = document.querySelector('#hat');
+		hat.style.position = 'absolute';
+		var hatAngle = 0;
+		var hatLastTime = null;
+
+		function animateHat(time) {
+			if (hatLastTime != null) {
+				hatAngle += (time - hatLastTime) * 0.001;
+			}
+
+			console.log(cat.offsetWidth);
+			console.log(cat.offsetHeight);
+
+			hatLastTime = time;
+			hat.style.top = ((Math.sin(hatAngle) * 100) + (Math.sin(hatAngle) * 64) + parseInt(cat.style.top)) + "px";
+			hat.style.left = ((Math.cos(hatAngle) * 100) + (Math.cos(hatAngle) * 64) + parseInt(cat.style.left)) + "px";
+
+			requestAnimationFrame(animateHat);
+		}
+
+		requestAnimationFrame(animateHat);
+	</script>
+</body>
