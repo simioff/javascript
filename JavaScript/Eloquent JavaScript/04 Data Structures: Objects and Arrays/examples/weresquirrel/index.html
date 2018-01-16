@@ -1,0 +1,15 @@
+<!doctype html>
+<script src="js/jacquesJournal.js"></script>
+<script src="js/weresquirrel.js"></script>
+
+<body>
+	<script>
+		var correlations = gatherCorrelations(JOURNAL);
+		for (var event in correlations) {
+			var correlation = correlations[event];
+			if (correlation >= 0.3 || correlation <= -0.3) {
+				document.write(correlation + '<br\>');
+			}
+		}
+	</script>
+</body>
