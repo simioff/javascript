@@ -347,3 +347,10 @@ for (var i = 0; i < 1500; i++) {
 	valley.turn();
 	console.log(valley.toString());
 }
+
+/* 
+exercises TODO:
+
+artificial stupidity 
+predators
+*/

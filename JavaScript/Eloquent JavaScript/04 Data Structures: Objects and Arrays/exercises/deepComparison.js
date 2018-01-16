@@ -30,6 +30,7 @@ console.log(obj === {
 });
 // → false
 
+// https://stackoverflow.com/questions/38400594/javascript-deep-comparison
 function deepEqual(a, b) {
   if ((typeof a == 'object' && a != null) && 
     (typeof b == 'object' && b != null)) {

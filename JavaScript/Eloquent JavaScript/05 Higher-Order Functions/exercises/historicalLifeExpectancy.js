@@ -46,9 +46,9 @@ function grouping(array, func) {
   array.forEach(function(person) {
     var key = func(person);
 
-    /*if (groups[key] == undefined) {
+    if (groups[key] == undefined) {
       groups[key] = [];
-    }*/
+    }
     groups[key].push(person);
   })
 

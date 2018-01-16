@@ -1,8 +1,3 @@
-// do(define(x,10),
-// 	 if(>(x,5),
-//     print("large"),
-//     print("small")))
-
 function parseExpression(program) {
 	program = skipSpace(program);
 	var match, expr;
@@ -246,10 +241,6 @@ function run() {
 	return evaluate(parse(program), env);
 }
 
-// console.log(evaluate(parse('if(true, false, true)'), topEnv)); 
-
-// console.log(parse('+(a, 10)'));
-
 run('do(define(total, 0),',
 	'   define(count, 1),',
 	'   while(<(count, 11),',
@@ -266,7 +257,7 @@ run('do(define(pow, fun(base, exp,',
 	'        *(base, pow(base, -(exp, 1)))))),',
 	'   print(pow(2, 10)))');
 
-// EXERCISES
+// EXERCISES implemented above
 
 // arrays
 run('do(define(x, 3),',
