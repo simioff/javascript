@@ -21,24 +21,15 @@ function some(array, predicate) {
 var arr = [-10, -1, 0, 1, 3, 6, 40, 99];
 
 var positive = function(el) {
-	if (el >= 0) 
-		return true;
-	else
-		return false; 
+	return el >= 0;
 };
 
 var in100Range = function(el) {
-	if (Math.abs(el) < 100) 
-		return true;
-	else 
-		return false;
+	return Math.abs(el) < 100;
 };
 
 var isString = function(el) {
-	if (typeof el == 'string') 
-		return true;
-	else
-		return false;
+	return typeof el == 'string';
 }
 
 console.log(every(arr, positive)); // false

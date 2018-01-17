@@ -343,14 +343,7 @@ var valley = new LifelikeWorld(planWithPlants, {
 
 console.log(valley.toString());
 
-for (var i = 0; i < 1500; i++) {
+for (var i = 0; i < 100; i++) {
 	valley.turn();
 	console.log(valley.toString());
 }
-
-/* 
-exercises TODO:
-
-artificial stupidity 
-predators
-*/

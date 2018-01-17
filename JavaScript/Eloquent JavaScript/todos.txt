@@ -1,0 +1,22 @@
+- [implement] 6 The Secret Life of Objects/Exercises/Sequence interface;
+- [implement] 7 Project: Electronic Life/Exercises/Artificial stupidity;
+- [implement] 7 Project: Electronic Life/Exercises/Predators;
+- [implement] 9 Regular Expressions/Exercises/Quoting style;
+- [implement] 9 Regular Expressions/Exercises/Numbers again;
+- [implement] 10 Modules/Exercises/*;
+- [implement] 13 The Document Object Model/Exercises/Elements by tag name;
+- [implement] 14 Handling Events/Exercises/Tabs;
+- [fix] 15 Project: A Platform Game
+	- bug: after level 1 the level is not resized
+- [implement] 15 Project: A Platform Game/Exercises/*;
+- [implement] 16 Drawing on Canvas/Exercises/*;
+- [implement] 17 HTTP/Exercises/Waiting for multiple promises;
+- [implement] 18 Forms and Form Fields/Exercises/*;
+- [implement] 19 Project: A Paint Program/Exercises/*;
+- [fix] 20 Node.js/Exercises/Content negotiation, again
+	- bug: socket hang up
+- [implement] 20 Node.js/Exercises/Fixing a leak;
+- [implement] 20 Node.js/Exercises/A public space on the web;
+- [fix] 21 Project: Skill-Sharing Website
+	- bug: Cannot find module 'ecstatic'
+- [implement] 21 Project: Skill-Sharing Website/Exercises/*;

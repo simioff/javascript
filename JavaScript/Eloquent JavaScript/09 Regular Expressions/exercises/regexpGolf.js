@@ -26,6 +26,5 @@ console.log(whiteSpacePattern.test('aaa\r\n;  '));
 var wordLongerPattern = /(\b[a-zA-Z]{6,}\b)/;
 console.log(wordLongerPattern.test('RegExr v3 was created by gskinner.com'));
 
-// TODO A word without the letter e
-/*var wordWithoutEPattern = /\b([^e]+)\b/g; 
-console.log(wordWithoutEPattern.test('RegExr v3 was created by gskinner.com'));*/
+var wordWithoutEPattern = /\b([^e\s\W]+)\b/g; 
+console.log('RegExr v3 was created by gskinner.com'.match(wordWithoutEPattern));
